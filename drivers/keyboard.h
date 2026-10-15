@@ -1,0 +1,24 @@
+#ifndef UNKNOWNOS_KEYBOARD_H
+#define UNKNOWNOS_KEYBOARD_H
+
+#include <stdint.h>
+
+#define KEYBOARD_KEY_RELEASED 0x80
+
+typedef enum {
+KEYBOARD_KEY_NONE = 0,
+KEYBOARD_KEY_ESCAPE,
+KEYBOARD_KEY_ENTER,
+KEYBOARD_KEY_BACKSPACE,
+KEYBOARD_KEY_TAB,
+KEYBOARD_KEY_SPACE,
+KEYBOARD_KEY_SHIFT,
+KEYBOARD_KEY_CTRL,
+KEYBOARD_KEY_ALT,
+KEYBOARD_KEY_CAPS_LOCK
+} keyboard_key_t;
+
+int keyboard_has_data(void);
+char keyboard_read_char(void);
+
+#endif
